@@ -1,45 +1,47 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
+// book class:respersents a Book
 
-var btn = document.getElementById("del");
 
-function inputLength() {
-	return input.value.length;
-}
+class Book{
+	constructor(title,author,isbn){
+		this.title=title;
+		this.author=author;
+		this.isbn=isbn;
 
-function createListElement() {
-	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value));
-	ul.appendChild(li);
-	li.appendChild( document.createTextNode( '\u00A0\u00A0\u00A0' ) );
-
- // Create a <button> element
-
- var bt = document.createElement("BUTTON");
-  bt.classList.add("mystyle");
-btn.innerHTML = "del";                   // Insert text
-li.appendChild(btn);
-	input.value = "";
-}
-function deleteListElement(){
-	var e = document.querySelector("ul");
-		e.innerHTML = "";
-
-}
-
-function addListAfterClick() {
-	if (inputLength() > 0) {
-		createListElement();
 	}
 }
+// ui class:handle ui tasks
 
-function addListAfterKeypress(event) {
-	if (inputLength() > 0 && event.keyCode === 13) {
-		createListElement();
+class UI{
+	static displayBooks(){
+
+	}
+	static addBookToList(book){
+
+	}
+	static deleteBook(el){
+
+	}
+	static showAlert(message,ClassName){
+
+	}
+	static clearFields(){
+
 	}
 }
-btn.addEventListener("click", deleteListElement);
-button.addEventListener("click", addListAfterClick);
+//store class: handles storage
 
-input.addEventListener("keypress", addListAfterKeypress);
+
+class store{
+	static getBooks(){
+
+	}
+	static addBooks(book){
+
+	}
+	static removeBook(isbn){
+
+	}
+}
+//event :display books
+// event: add abook
+//event : remove a book

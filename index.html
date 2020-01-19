@@ -1,22 +1,47 @@
-<!DOCTYPE html>
-<html>
+<<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Javascript + DOM</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>My Book List App</title>
+	<link rel="stylesheet" href="fontawsepme.min.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+
 </head>
 <body>
-	<h1>Shopping Listnot good one have to make a new one</h1>
-	<p id="first">Get it done today</p>
-	<input id="userinput" type="text" placeholder="enter items">
-	<button id="enter">Enter</button>
-	<ul>
-		<li class="bold red" random="23">Notebook</li>
-		<li>Jello    	<button id="del">del</button></li>
-		<li>Spinach   	<button id="del">del</button></li>
-		<li>Rice   	<button id="del">del</button></li>
-		<li>Birthday Cake   	<button id="del">del</button></li>
-		<li>Candles   	<button id="del">del</button></li>
-	</ul>
-	<script type="text/javascript" src="script.js"></script>
+<div class="container mt-4">
+<h1 class="display-4 text-center">
+	<i class="fas fa-book-open text-primary"></i>
+	My <span class="text-primary"> Book</span> List
+</h1>
+<form  id="book-form">
+<div class="form-group">
+	<label for="title">Title</label>
+		<input type="text" id="title" class="form-control">
+</div>
+<div class="form-group">
+	<label for="author">Author</label>
+		<input type="text" id="author" class="form-control">
+</div>
+<div class="form-group">
+	<label for="isbn">Isbn</label>
+		<input type="text" id="isbn" class="form-control">
+</div>
+<intput type="submit" value="Add book" class="btn btn-primary btn-block">Add Book</intput>
+</form>
+<table class="table table-striped mt-5">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>ISBN#</th>
+			<th></th>
+			</tr>
+	</thead>
+	<tbody id="book-list"></tbody>
+</table>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
